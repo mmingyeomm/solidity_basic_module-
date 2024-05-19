@@ -4,7 +4,6 @@
 
 ## 준비사항
 
-- MetaMask 설치 및 설정
 - Remix IDE에 접속: [https://remix.ethereum.org](https://remix.ethereum.org)
 
 ## 1. 스마트 컨트랙트 작성
@@ -17,6 +16,8 @@
 ### 1.2. MyContract.sol 작성
 
 `MyContract.sol` 파일에 다음 코드를 작성합니다:
+![alt text](image.png)
+
 
 ```solidity
 // SPDX-License-Identifier: MIT
