@@ -55,9 +55,9 @@ contract testContract {
 
 ### 3.1. 환경 설정하기 
 
- 좌측 메뉴에서 Deploy & Run Transactions를 선택합니다.  
- Environment를 Remix VM(Shanghai)로 설정합니다.  
- 아래 메뉴의 Account를 통해 Remix VM에 속해있는 지갑들과 각 지갑이 들고 있는 ether의 수를 확인할 수 있습니다. 
+ - 좌측 메뉴에서 Deploy & Run Transactions를 선택합니다.  
+ - Environment를 Remix VM(Shanghai)로 설정합니다.  
+ - 아래 메뉴의 Account를 통해 Remix VM에 속해있는 지갑들과 각 지갑이 들고 있는 ether의 수를 확인할 수 있습니다. 
 
 
 ### 3.2. 컨트랙트 배포하기
@@ -69,4 +69,31 @@ contract testContract {
 
 ![alt text](image-2.png)
 
-배포가 성공했을 경우 
+트랜잭션이 생성되어 testContract 인스턴스가 배포됩니다.  
+실제 블록체인에서는 트랜잭션을 승인한 후, 트랜잭션이 채굴되어 블록에 올라갈 때까지 기다려야 하지만, Remix IDE에서 제공하는 Remix VM을 사용하고 있기 때문에 실행은 즉시 이루어집니다.
+
+트랜잭션이 완료되면 아래와 같이 터미널에서 트랜잭션에 대한 정보를 제공합니다.
+
+![alt text](image-3.png)  
+
+새로 생성된 인스턴스는 Deployed Contracts 섹션에 표시됩니다.
+
+
+### 3.3. 베포된 컨트랙트와 상호 작용하기 
+
+방금 배포하여 새로 만들어진 TESTCONTRACT  인스턴스에는 3개의 함수(setP, setPN, get)가 포함되어 있습니다.  
+
+setP 또는 setPN을 클릭하면 새로운 트랜잭션이 생성됩니다.  
+get을 클릭하면 value에 저장되어 있는 값을 확인 할 수 있습니다.  
+
+![alt text](image-4.png)
+
+
+setP는 payable 함수입니다 (빨간색 버튼). payable 함수를 사용하면 계약에 ETH를 보낼 수 있습니다. ETH의 양은 위에 있는 사진과 같이 VALUE 입력 필드에서 선택하고, ETH의 단위는 오른쪽 상자에서 선택합니다.  
+
+*참고 계약에 ETH를 보낸다는 말은 CA(contract account)에 ETH를 보낸다는 뜻
+  
+setPN은 payable 함수가 아니기 때문에, (주황색 버튼) 트랜잭션에 ether를 전송할 수 없습니다.  
+
+get은 view 함수이기 때문에 state에 변화를 줄 수 없고 그러므로 transaction 없이 값을 읽어올 수 있습니다. 
+
