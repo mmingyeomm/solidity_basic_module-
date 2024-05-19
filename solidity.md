@@ -55,8 +55,8 @@ contract testContract {
 
 ### 3.1. 환경 설정하기 
 
- 좌측 메뉴에서 Deploy & Run Transactions를 선택합니다.
- Environment를 Remix VM(Shanghai)로 설정합니다. 
+ 좌측 메뉴에서 Deploy & Run Transactions를 선택합니다.  
+ Environment를 Remix VM(Shanghai)로 설정합니다.  
  아래 메뉴의 Account를 통해 Remix VM에 속해있는 지갑들과 각 지갑이 들고 있는 ether의 수를 확인할 수 있습니다. 
 
 
@@ -67,3 +67,6 @@ contract testContract {
 위와 같이 contract가 잘 선택되어 있는지 확인하고, uint256 _p 값에 숫자 1을 입력하고 Deploy 버튼을 누릅니다. 
 
 
+![alt text](image-2.png)
+
+배포가 성공했을 경우 
